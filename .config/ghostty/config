@@ -1,5 +1,7 @@
 auto-update = check
+shell-integration = zsh
 
+font-family = "JetBrains Mono"
 theme = Cobalt2
 background = #303030
 
