@@ -28,7 +28,7 @@ window#waybar {
 
 #workspaces button.active {
     color: #7287fd;  /* Lavender */
-    background: transparent;
+    background: rgba(114, 135, 253, 0.1);  /* Lavender with transparency */
     border-radius: 12px;
 }
 
