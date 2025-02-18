@@ -8,10 +8,10 @@
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
 
     "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
+        "format": "{name}",
         "on-click": "activate",
-        "format": "{icon}",
+        "all-outputs": true,
+        "sort-by-number": true,
         "format-icons": {
             "1": "1",
             "2": "2",
@@ -22,10 +22,17 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "10": "10"
+            "10": "10",
+            "urgent": "",
+            "focused": "",
+            "default": ""
         },
-        "persistent-workspaces": {
-            "*": 5 
+        "persistent_workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
         }
     },
 
