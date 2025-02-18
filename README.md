@@ -1,8 +1,30 @@
-# 🏠 UlmerMan's Dotfiles
+<div align="center">
 
-A carefully curated collection of dotfiles managed with [yadm](https://yadm.io/), featuring configurations for:
+# ⚡️ UlmerMan's Dotfiles
 
-## 🚀 Featured Configurations
+> 🧪 **EXPERIMENTAL - NOT FOR DAILY USE** 🧪
+> 
+> This configuration is currently under heavy development and experimentation.
+> It may break, change significantly, or eat your homework.
+> Use at your own risk!
+
+<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px" />
+
+![Hyprland](https://img.shields.io/badge/Hyprland-✨_WM-8839ef?style=flat-square)
+![Ghostty](https://img.shields.io/badge/Ghostty-🚀_Terminal-f5a97f?style=flat-square)
+![Yazi](https://img.shields.io/badge/Yazi-📁_File_Manager-a6da95?style=flat-square)
+![YADM](https://img.shields.io/badge/YADM-⚙️_Dotfiles-8bd5ca?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Experimental-red?style=flat-square)
+
+*My current Dotfiles*
+
+[Installation](#installation) • [Components](#components) • [Screenshots](#screenshots) • [Themes](#themes)
+
+---
+⚠️ **Current Status**: Pre-alpha, expect frequent breaking changes
+</div>
+
+## 💡 Key Features
 
 - **Window Manager**: [Hyprland](https://hyprland.org/) - A dynamic tiling Wayland compositor
 - **File Manager**: [yazi](https://yazi-rs.github.io/) - Terminal file manager with git integration
@@ -13,7 +35,7 @@ A carefully curated collection of dotfiles managed with [yadm](https://yadm.io/)
 
 - **Shell**: zsh with Oh My Zsh
   - Plugins: git, zsh-autosuggestions, zsh-syntax-highlighting, and more
-- **Terminal Multiplexer**: tmux with custom plugins
+- **Terminal Multiplexer**: tmux
 - **System Monitor**: btop
 - **Additional Tools**: 
   - superfile (with multiple themes)
