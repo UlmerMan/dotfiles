@@ -3,28 +3,35 @@
     "position": "top",
     "height": 40,
     "spacing": 8,
+    "output": "all",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
+        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "1": "●",
-            "2": "●",
-            "3": "●",
-            "4": "●",
-            "5": "●",
-            "6": "●",
-            "7": "●",
-            "8": "●",
-            "9": "●",
-            "10": "●"
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
         },
         "persistent-workspaces": {
-            "*": 5 // Show first 5 workspaces on every monitor
+            "1": ["DP-1", "HDMI-A-1"],
+            "2": ["DP-1", "HDMI-A-1"],
+            "3": ["DP-1", "HDMI-A-1"],
+            "4": ["DP-1", "HDMI-A-1"],
+            "5": ["DP-1", "HDMI-A-1"],
+            "6": ["DP-1", "HDMI-A-1"]
         }
     },
 
