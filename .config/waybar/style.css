@@ -8,13 +8,14 @@
 
 window#waybar {
     background: transparent;
-    color: #4c4f69;  /* Text */
+    color: #eff1f5;  /* Base - now used as text color */
 }
 
 #workspaces {
-    background: transparent;
-    margin: 5px;
-    padding: 0 5px;
+    background: #4c4f69;  /* Text - now used as dark background */
+    border-radius: 12px;
+    margin: 6px;
+    padding: 0 6px;
 }
 
 #workspaces button {
@@ -32,7 +33,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: rgba(108, 111, 133, 0.2);  /* Overlay2 with transparency */
+    background: rgba(239, 241, 245, 0.1);  /* Base with transparency */
     border-radius: 12px;
     color: #7287fd;  /* Lavender */
 }
@@ -51,9 +52,9 @@ window#waybar {
 #tray {
     padding: 0 12px;
     margin: 6px;
-    color: #4c4f69;  /* Text */
+    color: #eff1f5;  /* Base - now used as text color */
     border-radius: 12px;
-    background-color: #eff1f5;  /* Base */
+    background-color: #4c4f69;  /* Text - now used as dark background */
     min-height: 28px;
 }
 
@@ -61,7 +62,7 @@ window#waybar {
     margin: 0 6px;
     border-radius: 12px;
     background-color: transparent;
-    color: #4c4f69;  /* Text */
+    color: #eff1f5;  /* Base - now used as text color */
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -86,7 +87,7 @@ window#waybar {
 @keyframes blink {
     to {
         background-color: #d20f39;  /* Red */
-        color: #eff1f5;  /* Base */
+        color: #4c4f69;  /* Text */
     }
 }
 
@@ -103,7 +104,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: #eff1f5;  /* Base */
+    background-color: #4c4f69;  /* Text - now used as dark background */
 }
 
 #tray > .passive {
@@ -113,11 +114,4 @@ window#waybar {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: #d20f39;  /* Red */
-}
-
-#workspaces {
-    background: #eff1f5;  /* Base */
-    border-radius: 12px;
-    margin: 6px;
-    padding: 0 6px;
 }
