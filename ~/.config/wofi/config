@@ -1,0 +1,16 @@
+# Wofi configuration
+
+# General
+show=drun
+width=800
+height=400
+always_parse_args=true
+show_all=true
+print_command=true
+layer=overlay
+insensitive=true
+prompt=Search...
+gtk_dark=true
+
+# Appearance
+style=/home/$USER/.config/wofi/style.css
