@@ -59,8 +59,6 @@ install_waybar() {
             ;;
     esac
 
-    # Ensure Waybar config directory exists
-    mkdir -p "$HOME/.config/waybar"
 
     # Reload Waybar if it's running
     if pgrep waybar > /dev/null; then
