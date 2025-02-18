@@ -12,5 +12,10 @@ insensitive=true
 prompt=Search...
 gtk_dark=true
 
+# Icons
+allow_images=true
+image_size=24
+drun-display_generic=true
+
 # Appearance
 style=/home/$USER/.config/wofi/style.css
