@@ -8,11 +8,11 @@
 
 window#waybar {
     background: transparent;
-    color: #eff1f5;  /* Base - now used as text color */
+    color: #eff1f5;  /* Light text */
 }
 
 #workspaces {
-    background: #4c4f69;  /* Text - now used as dark background */
+    background: #1e1e1e;  /* VS Code dark gray */
     border-radius: 12px;
     margin: 6px;
     padding: 0 6px;
@@ -33,7 +33,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background: rgba(239, 241, 245, 0.1);  /* Base with transparency */
+    background: rgba(239, 241, 245, 0.1);  /* Light with transparency */
     border-radius: 12px;
     color: #7287fd;  /* Lavender */
 }
@@ -52,9 +52,9 @@ window#waybar {
 #tray {
     padding: 0 12px;
     margin: 6px;
-    color: #eff1f5;  /* Base - now used as text color */
+    color: #eff1f5;  /* Light text */
     border-radius: 12px;
-    background-color: #4c4f69;  /* Text - now used as dark background */
+    background-color: #1e1e1e;  /* VS Code dark gray */
     min-height: 28px;
 }
 
@@ -62,12 +62,22 @@ window#waybar {
     margin: 0 6px;
     border-radius: 12px;
     background-color: transparent;
-    color: #eff1f5;  /* Base - now used as text color */
+    color: #eff1f5;  /* Light text */
 }
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+/* Ensure modules-right has proper spacing */
+.modules-right {
+    margin-right: 6px;
 }
 
 #battery.charging, #battery.plugged {
@@ -76,7 +86,7 @@ window#waybar {
 
 #battery.critical:not(.charging) {
     background-color: #d20f39;  /* Red */
-    color: #eff1f5;  /* Base */
+    color: #eff1f5;  /* Light text */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -87,7 +97,7 @@ window#waybar {
 @keyframes blink {
     to {
         background-color: #d20f39;  /* Red */
-        color: #4c4f69;  /* Text */
+        color: #1e1e1e;  /* VS Code dark gray */
     }
 }
 
@@ -104,7 +114,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: #4c4f69;  /* Text - now used as dark background */
+    background-color: #1e1e1e;  /* VS Code dark gray */
 }
 
 #tray > .passive {
