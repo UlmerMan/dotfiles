@@ -1,0 +1,15 @@
+auto-update = check
+shell-integration = zsh
+
+font-family = "JetBrains Mono"
+theme = Cobalt2
+background = #303030
+
+# Add transparency
+background-opacity = 0.9
+window-background-blur = true
+
+cursor-style = block
+cursor-color = #FFFFFF
+
+keybind = ctrl+shift+r=reload_config

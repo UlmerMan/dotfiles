@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(21, 18, 27, 0.8);
+    background: transparent;
     color: #cdd6f4;
 }
 
@@ -20,17 +20,19 @@ window#waybar {
 
 #workspaces button.active {
     background: #1e1e2e;
+    border-radius: 10px;
     border-bottom: 3px solid #cba6f7;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    box-shadow: inherit;
+    border-radius: 10px;
     border-bottom: 3px solid #cba6f7;
 }
 
 #workspaces button.urgent {
     background-color: #f38ba8;
+    border-radius: 10px;
 }
 
 #clock,
@@ -42,12 +44,16 @@ window#waybar {
 #pulseaudio,
 #tray {
     padding: 0 10px;
-    margin: 0 5px;
+    margin: 5px;
     color: #cdd6f4;
+    border-radius: 10px;
+    background-color: #1e1e2e;
 }
 
 #window {
     margin: 0 4px;
+    border-radius: 10px;
+    background-color: transparent;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
