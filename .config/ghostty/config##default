@@ -1,0 +1,11 @@
+auto-update = check
+shell-integration = zsh
+
+font-family = "JetBrains Mono"
+theme = Cobalt2
+background = #303030
+
+cursor-style = block
+cursor-color = #FFFFFF
+
+keybind = ctrl+shift+r=reload_config
