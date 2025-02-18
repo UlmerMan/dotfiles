@@ -10,3 +10,15 @@ install_brew() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   fi
 }
+
+# Install Homebrew 
+echo "Setting up Homebrew..."
+install_brew
+
+echo "Setting up Hyprland..."
+
+# Run Waybar installation
+echo "Setting up Waybar..."
+"$HOME/.config/yadm/hyprland/waybar.sh"
+
+echo "Bootstrap completed."
