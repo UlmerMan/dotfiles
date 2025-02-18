@@ -8,7 +8,7 @@
 
 window#waybar {
     background: transparent;
-    color: #cdd6f4;
+    color: #4c4f69;  /* Text */
 }
 
 #workspaces {
@@ -20,25 +20,25 @@ window#waybar {
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #45475a;
+    color: #9ca0b0;  /* Overlay0 - for inactive */
     font-size: 16px;
     min-width: 30px;
 }
 
 #workspaces button.active {
-    color: #cba6f7;
+    color: #7287fd;  /* Lavender */
     background: transparent;
     border-radius: 12px;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(108, 111, 133, 0.2);  /* Overlay2 with transparency */
     border-radius: 12px;
-    color: #cba6f7;
+    color: #7287fd;  /* Lavender */
 }
 
 #workspaces button.urgent {
-    color: #f38ba8;
+    color: #d20f39;  /* Red */
 }
 
 #clock,
@@ -51,9 +51,9 @@ window#waybar {
 #tray {
     padding: 0 12px;
     margin: 6px;
-    color: #cdd6f4;
+    color: #4c4f69;  /* Text */
     border-radius: 12px;
-    background-color: #1e1e2e;
+    background-color: #eff1f5;  /* Base */
     min-height: 28px;
 }
 
@@ -61,6 +61,7 @@ window#waybar {
     margin: 0 6px;
     border-radius: 12px;
     background-color: transparent;
+    color: #4c4f69;  /* Text */
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -69,12 +70,12 @@ window#waybar {
 }
 
 #battery.charging, #battery.plugged {
-    color: #a6e3a1;
+    color: #40a02b;  /* Green */
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f38ba8;
-    color: #cdd6f4;
+    background-color: #d20f39;  /* Red */
+    color: #eff1f5;  /* Base */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -84,21 +85,25 @@ window#waybar {
 
 @keyframes blink {
     to {
-        background-color: #f38ba8;
-        color: #1e1e2e;
+        background-color: #d20f39;  /* Red */
+        color: #eff1f5;  /* Base */
     }
 }
 
 #network.disconnected {
-    background-color: #f38ba8;
+    background-color: #d20f39;  /* Red */
 }
 
 #pulseaudio.muted {
-    background-color: #f38ba8;
+    background-color: #d20f39;  /* Red */
 }
 
 #temperature.critical {
-    background-color: #f38ba8;
+    background-color: #d20f39;  /* Red */
+}
+
+#tray {
+    background-color: #eff1f5;  /* Base */
 }
 
 #tray > .passive {
@@ -107,5 +112,12 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #f38ba8;
+    background-color: #d20f39;  /* Red */
+}
+
+#workspaces {
+    background: #eff1f5;  /* Base */
+    border-radius: 12px;
+    margin: 6px;
+    padding: 0 6px;
 }
