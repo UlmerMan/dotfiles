@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrains Mono", "Font Awesome 6 Free";
-    font-size: 24px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -11,28 +11,34 @@ window#waybar {
     color: #cdd6f4;
 }
 
+#workspaces {
+    background: transparent;
+    margin: 5px;
+    padding: 0 5px;
+}
+
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #cdd6f4;
-    border-bottom: 3px solid transparent;
+    color: #45475a;
+    font-size: 16px;
+    min-width: 30px;
 }
 
 #workspaces button.active {
-    background: #1e1e2e;
-    border-radius: 10px;
-    border-bottom: 3px solid #cba6f7;
+    color: #cba6f7;
+    background: transparent;
+    border-radius: 12px;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    border-bottom: 3px solid #cba6f7;
+    border-radius: 12px;
+    color: #cba6f7;
 }
 
 #workspaces button.urgent {
-    background-color: #f38ba8;
-    border-radius: 10px;
+    color: #f38ba8;
 }
 
 #clock,
@@ -43,16 +49,17 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray {
-    padding: 0 10px;
-    margin: 5px;
+    padding: 0 12px;
+    margin: 6px;
     color: #cdd6f4;
-    border-radius: 10px;
+    border-radius: 12px;
     background-color: #1e1e2e;
+    min-height: 28px;
 }
 
 #window {
-    margin: 0 4px;
-    border-radius: 10px;
+    margin: 0 6px;
+    border-radius: 12px;
     background-color: transparent;
 }
 
