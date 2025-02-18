@@ -3,14 +3,12 @@
     "position": "top",
     "height": 40,
     "spacing": 8,
-    "output": "all",
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
             "1": "●",
@@ -31,14 +29,17 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 50
+        "max-length": 50,
+        "separate-outputs": true
     },
 
     "tray": {
-        "spacing": 10
+        "spacing": 10,
+        "icon-size": 16
     },
 
     "clock": {
+        "timezone": "Europe/Berlin",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%H:%M}",
         "format-alt": "{:%Y-%m-%d}"
@@ -46,17 +47,23 @@
 
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 1
     },
 
     "memory": {
-        "format": "{}% "
+        "format": "{}% ",
+        "interval": 1
     },
 
     "temperature": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "interval": 1
     },
 
     "battery": {
@@ -83,6 +90,7 @@
     },
 
     "pulseaudio": {
+        "scroll-step": 1,
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
