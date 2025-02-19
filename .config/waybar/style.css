@@ -32,7 +32,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono", "Font Awesome 6 Free", "Font Awesome 6 Brands";
+    font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", "NotoSans Nerd Font";
     font-size: 16px;
     min-height: 0;
 }
@@ -40,29 +40,29 @@
 window#waybar {
     background: transparent;
     color: @text;
-    margin: 5px 5px;  /* Added margin around the entire bar */
+    margin: 5px 5px;
 }
 
 #workspaces {
     background: @base;
-    border-radius: 12px;  /* Increased from 10px */
-    margin: 6px;  /* Increased from 5px */
-    padding: 0 8px;  /* Increased from 0 5px */
+    border-radius: 12px;
+    margin: 6px;
+    padding: 0 8px;
 }
 
 #workspaces button {
-    padding: 2px 8px;  /* Increased padding */
+    padding: 2px 8px;
     background: transparent;
     color: @text;
-    border-radius: 12px;  /* Increased from 10px */
-    margin: 3px;  /* Increased from 2px */
-    min-width: 36px;  /* Added minimum width */
+    border-radius: 12px;
+    margin: 3px;
+    min-width: 36px;
 }
 
 #workspaces button.active {
     background: @mauve;
     color: @base;
-    padding: 2px 12px;  /* Slightly larger padding for active workspace */
+    padding: 2px 12px;
 }
 
 #workspaces button:hover {
@@ -78,18 +78,18 @@ window#waybar {
 #pulseaudio,
 #tray {
     background: @base;
-    padding: 0 15px;  /* Increased from 0 10px */
-    margin: 6px 0;    /* Increased from 5px 0 */
-    border-radius: 12px;  /* Increased from 10px */
-    margin-right: 6px;  /* Increased from 5px */
-    min-width: 48px;  /* Added minimum width */
-    min-height: 32px;  /* Added minimum height */
+    padding: 0 15px;
+    margin: 6px 0;
+    border-radius: 12px;
+    margin-right: 6px;
+    min-width: 48px;
+    min-height: 32px;
 }
 
 #clock {
     color: @peach;
-    font-weight: bold;  /* Made clock bold */
-    min-width: 90px;  /* Ensure enough space for clock */
+    font-weight: bold;
+    min-width: 90px;
 }
 
 #battery {
@@ -142,7 +142,7 @@ window#waybar {
 
 #tray {
     background: @base;
-    padding: 0 12px;  /* Added specific tray padding */
+    padding: 0 12px;
 }
 
 #tray > .passive {
@@ -155,11 +155,11 @@ window#waybar {
 
 tooltip {
     background: @base;
-    border-radius: 12px;  /* Increased from 10px */
+    border-radius: 12px;
     border: 2px solid @mauve;
 }
 
 tooltip label {
     color: @text;
-    padding: 6px;  /* Added tooltip padding */
+    padding: 6px;
 }
