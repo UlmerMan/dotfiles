@@ -8,38 +8,37 @@
 
 window#waybar {
     background: transparent;
-    color: #eff1f5;  /* Light text */
+    color: #cdd6f4;
 }
 
 #workspaces {
-    background: #1e1e1e;  /* VS Code dark gray */
-    border-radius: 12px;
-    margin: 6px;
-    padding: 0 6px;
+    background: #1e1e2e;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 0 5px;
 }
 
 #workspaces button {
     padding: 0 5px;
     background: transparent;
-    color: #9ca0b0;  /* Overlay0 - for inactive */
-    font-size: 16px;
-    min-width: 30px;
+    color: #cdd6f4;
+    border-radius: 10px;
+    margin: 2px;
 }
 
 #workspaces button.active {
-    color: #7287fd;  /* Lavender */
-    background: rgba(114, 135, 253, 0.1);  /* Lavender with transparency */
-    border-radius: 12px;
+    background: #cba6f7;
+    color: #1e1e2e;
 }
 
 #workspaces button:hover {
-    background: rgba(239, 241, 245, 0.1);  /* Light with transparency */
-    border-radius: 12px;
-    color: #7287fd;  /* Lavender */
+    background: #313244;
+    color: #cdd6f4;
 }
 
 #workspaces button.urgent {
-    color: #d20f39;  /* Red */
+    background: #f38ba8;
+    color: #1e1e2e;
 }
 
 #clock,
@@ -50,78 +49,48 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray {
-    padding: 0 12px;
-    margin: 6px;
-    color: #eff1f5;  /* Light text */
-    border-radius: 12px;
-    background-color: #1e1e1e;  /* VS Code dark gray */
-    min-height: 28px;
+    background: #1e1e2e;
+    padding: 0 10px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #cdd6f4;
 }
 
-#window {
-    margin: 0 6px;
-    border-radius: 12px;
-    background-color: transparent;
-    color: #eff1f5;  /* Light text */
+/* Module-specific styling */
+#battery.charging {
+    color: #a6e3a1;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
-/* Ensure modules-right has proper spacing */
-.modules-right {
-    margin-right: 6px;
-}
-
-#battery.charging, #battery.plugged {
-    color: #40a02b;  /* Green */
+#battery.warning:not(.charging) {
+    color: #f9e2af;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #d20f39;  /* Red */
-    color: #eff1f5;  /* Light text */
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    color: #f38ba8;
+    animation: blink 0.5s linear infinite alternate;
 }
 
 @keyframes blink {
     to {
-        background-color: #d20f39;  /* Red */
-        color: #1e1e1e;  /* VS Code dark gray */
+        background: #f38ba8;
+        color: #1e1e2e;
     }
 }
 
 #network.disconnected {
-    background-color: #d20f39;  /* Red */
-}
-
-#pulseaudio.muted {
-    background-color: #d20f39;  /* Red */
+    color: #f38ba8;
 }
 
 #temperature.critical {
-    background-color: #d20f39;  /* Red */
+    color: #f38ba8;
 }
 
-#tray {
-    background-color: #1e1e1e;  /* VS Code dark gray */
+tooltip {
+    background: #1e1e2e;
+    border: 1px solid #cba6f7;
+    border-radius: 10px;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #d20f39;  /* Red */
+tooltip label {
+    color: #cdd6f4;
 }
