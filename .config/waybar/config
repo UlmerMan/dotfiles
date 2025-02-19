@@ -24,7 +24,8 @@
     },
 
     "tray": {
-        "spacing": 10
+        "icon-size": 18,
+        "spacing": 8
     },
 
     "clock": {
@@ -57,15 +58,19 @@
         "format": "{icon} {capacity}%",
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": ["���", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "network": {
-        "format-wifi": "󰤨 {essid}",
+        "format": "{ifname}",
+        "format-wifi": "󰤨 {essid} ({signalStrength}%)",
         "format-ethernet": "󰈀 {ipaddr}",
-        "format-linked": "󰈀 {ifname}",
         "format-disconnected": "󰤭 Disconnected",
-        "tooltip-format": "󰈀 {ifname} via {gwaddr}"
+        "format-linked": "󰈀 {ifname} (No IP)",
+        "format-alt": "󱘖 {bandwidthUpBytes} 󱘎 {bandwidthDownBytes}",
+        "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n󰤢 {gwaddr}\n",
+        "tooltip-format-wifi": "󰤨 {essid} ({signalStrength}%)\n󰩟 {ipaddr}/{cidr}\n󰤢 {gwaddr}\n󱘖 {bandwidthUpBytes} 󱘎 {bandwidthDownBytes}",
+        "on-click": "nm-connection-editor"
     },
 
     "pulseaudio": {
@@ -80,7 +85,7 @@
             "phone": "󰏲",
             "portable": "󰄝",
             "car": "󰄋",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "default": ["���", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     }

@@ -135,10 +135,34 @@ window#waybar {
 #network {
     color: @sapphire;
     background: @base;
+    padding: 0 12px;
+    border-radius: 10px;
+    margin: 5px 2px;
+    min-width: 100px;
 }
 
 #network.disconnected {
     color: @red;
+    background: @base;
+}
+
+#network.linked {
+    color: @yellow;
+    background: @base;
+}
+
+#network.ethernet {
+    color: @sapphire;
+    background: @base;
+}
+
+#network.wifi {
+    color: @sky;
+    background: @base;
+}
+
+#network:hover {
+    background: @surface0;
 }
 
 #pulseaudio {
