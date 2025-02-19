@@ -1,45 +1,72 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+
 * {
     border: none;
     border-radius: 0;
-    /* Explicitly define both fonts to ensure fallback */
     font-family: "JetBrains Mono", "Symbols Nerd Font Mono";
-    font-size: 14px;
+    font-size: 16px;  /* Increased from 14px */
     min-height: 0;
 }
 
 window#waybar {
     background: transparent;
-    color: #cdd6f4;
+    color: @text;
+    margin: 5px 5px;  /* Added margin around the entire bar */
 }
 
 #workspaces {
-    background: #1e1e2e;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 0 5px;
+    background: @base;
+    border-radius: 12px;  /* Increased from 10px */
+    margin: 6px;  /* Increased from 5px */
+    padding: 0 8px;  /* Increased from 0 5px */
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 2px 8px;  /* Increased padding */
     background: transparent;
-    color: #cdd6f4;
-    border-radius: 10px;
-    margin: 2px;
+    color: @text;
+    border-radius: 12px;  /* Increased from 10px */
+    margin: 3px;  /* Increased from 2px */
+    min-width: 36px;  /* Added minimum width */
 }
 
 #workspaces button.active {
-    background: #cba6f7;
-    color: #1e1e2e;
+    background: @mauve;
+    color: @base;
+    padding: 2px 12px;  /* Slightly larger padding for active workspace */
 }
 
 #workspaces button:hover {
-    background: #313244;
-    color: #cdd6f4;
-}
-
-#workspaces button.urgent {
-    background: #f38ba8;
-    color: #1e1e2e;
+    background: @surface0;
 }
 
 #clock,
@@ -50,48 +77,89 @@ window#waybar {
 #network,
 #pulseaudio,
 #tray {
-    background: #1e1e2e;
-    padding: 0 10px;
-    margin: 5px;
-    border-radius: 10px;
-    color: #cdd6f4;
+    background: @base;
+    padding: 0 15px;  /* Increased from 0 10px */
+    margin: 6px 0;    /* Increased from 5px 0 */
+    border-radius: 12px;  /* Increased from 10px */
+    margin-right: 6px;  /* Increased from 5px */
+    min-width: 48px;  /* Added minimum width */
+    min-height: 32px;  /* Added minimum height */
 }
 
-/* Module-specific styling */
+#clock {
+    color: @peach;
+    font-weight: bold;  /* Made clock bold */
+    min-width: 90px;  /* Ensure enough space for clock */
+}
+
+#battery {
+    color: @green;
+}
+
 #battery.charging {
-    color: #a6e3a1;
+    color: @green;
 }
 
 #battery.warning:not(.charging) {
-    color: #f9e2af;
+    color: @yellow;
 }
 
 #battery.critical:not(.charging) {
-    color: #f38ba8;
-    animation: blink 0.5s linear infinite alternate;
+    color: @red;
 }
 
-@keyframes blink {
-    to {
-        background: #f38ba8;
-        color: #1e1e2e;
-    }
+#cpu {
+    color: @blue;
 }
 
-#network.disconnected {
-    color: #f38ba8;
+#memory {
+    color: @mauve;
+}
+
+#temperature {
+    color: @yellow;
 }
 
 #temperature.critical {
-    color: #f38ba8;
+    color: @red;
+}
+
+#network {
+    color: @teal;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @sky;
+}
+
+#pulseaudio.muted {
+    color: @overlay0;
+}
+
+#tray {
+    background: @base;
+    padding: 0 12px;  /* Added specific tray padding */
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
 }
 
 tooltip {
-    background: #1e1e2e;
-    border: 1px solid #cba6f7;
-    border-radius: 10px;
+    background: @base;
+    border-radius: 12px;  /* Increased from 10px */
+    border: 2px solid @mauve;
 }
 
 tooltip label {
-    color: #cdd6f4;
+    color: @text;
+    padding: 6px;  /* Added tooltip padding */
 }
