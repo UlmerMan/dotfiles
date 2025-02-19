@@ -1,3 +1,4 @@
+/* Catppuccin Mocha colors */
 @define-color base   #1e1e2e;
 @define-color mantle #181825;
 @define-color crust  #11111b;
@@ -33,7 +34,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrains Mono Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", "NotoSans Nerd Font";
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -45,28 +46,30 @@ window#waybar {
 
 #workspaces {
     background: @base;
-    border-radius: 12px;
-    margin: 6px;
-    padding: 0 8px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 0 5px;
 }
 
 #workspaces button {
-    padding: 2px 8px;
+    padding: 0 5px;
     background: transparent;
     color: @text;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 3px;
-    min-width: 36px;
+    min-width: 30px;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
     background: @mauve;
     color: @base;
-    padding: 2px 12px;
+    padding: 0 10px;
 }
 
 #workspaces button:hover {
     background: @surface0;
+    color: @mauve;
 }
 
 #clock,
@@ -78,22 +81,22 @@ window#waybar {
 #pulseaudio,
 #tray {
     background: @base;
-    padding: 0 15px;
-    margin: 6px 0;
-    border-radius: 12px;
-    margin-right: 6px;
-    min-width: 48px;
-    min-height: 32px;
+    padding: 0 12px;
+    margin: 5px 2px;
+    border-radius: 10px;
+    color: @text;
+    transition: all 0.3s ease;
 }
 
 #clock {
-    color: @peach;
+    color: @mauve;
     font-weight: bold;
-    min-width: 90px;
+    background: @base;
 }
 
 #battery {
     color: @green;
+    background: @base;
 }
 
 #battery.charging {
@@ -102,22 +105,27 @@ window#waybar {
 
 #battery.warning:not(.charging) {
     color: @yellow;
+    animation: blink 0.5s ease infinite alternate;
 }
 
 #battery.critical:not(.charging) {
     color: @red;
+    animation: blink 0.5s ease infinite alternate;
 }
 
 #cpu {
     color: @blue;
+    background: @base;
 }
 
 #memory {
-    color: @mauve;
+    color: @lavender;
+    background: @base;
 }
 
 #temperature {
-    color: @yellow;
+    color: @peach;
+    background: @base;
 }
 
 #temperature.critical {
@@ -125,7 +133,8 @@ window#waybar {
 }
 
 #network {
-    color: @teal;
+    color: @sapphire;
+    background: @base;
 }
 
 #network.disconnected {
@@ -134,6 +143,7 @@ window#waybar {
 
 #pulseaudio {
     color: @sky;
+    background: @base;
 }
 
 #pulseaudio.muted {
@@ -142,7 +152,6 @@ window#waybar {
 
 #tray {
     background: @base;
-    padding: 0 12px;
 }
 
 #tray > .passive {
@@ -151,15 +160,33 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
+    color: @red;
+}
+
+@keyframes blink {
+    to {
+        color: @red;
+        background: @surface0;
+    }
 }
 
 tooltip {
     background: @base;
-    border-radius: 12px;
     border: 2px solid @mauve;
+    border-radius: 10px;
 }
 
 tooltip label {
     color: @text;
-    padding: 6px;
+    padding: 5px;
+}
+
+/* Hover effects */
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover {
+    background: @surface0;
 }
