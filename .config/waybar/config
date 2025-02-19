@@ -8,26 +8,19 @@
     "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
 
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{name}",
         "on-click": "activate",
         "all-outputs": true,
         "sort-by-number": true,
         "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
             "urgent": "",
             "focused": "",
             "default": ""
-        },
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
         }
     },
 
@@ -58,10 +51,8 @@
         "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C {icon}",
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""],
-        "interval": 1
+        "format-critical": "{temperatureC}°C ",
+        "format": " {temperatureC}°C"
     },
 
     "battery": {
@@ -71,38 +62,32 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
-        "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "��", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "network": {
         "format-wifi": "󰤨 {essid}",
-        "format-ethernet": " {ipaddr}",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "format-linked": " {ifname}",
+        "format-ethernet": "󰈀 {ipaddr}",
+        "format-linked": "󰈀 {ifname}",
         "format-disconnected": "󰤭 Disconnected",
-        "format-alt": "󰤨 {ifname}: {ipaddr}/{cidr}",
-        "on-click": "nm-connection-editor"
+        "tooltip-format": "{ifname} via {gwaddr}"
     },
 
     "pulseaudio": {
-        "scroll-step": 1,
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{icon} {volume}%",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format-bluetooth": "󰂯 {volume}%",
+        "format-bluetooth-muted": "󰂲 ",
+        "format-muted": "󰝟",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     }

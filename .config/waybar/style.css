@@ -1,7 +1,8 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrains Mono", "Font Awesome 6 Free";
+    /* Explicitly define both fonts to ensure fallback */
+    font-family: "JetBrains Mono", "Symbols Nerd Font Mono";
     font-size: 14px;
     min-height: 0;
 }
