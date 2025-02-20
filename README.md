@@ -75,5 +75,7 @@ When prompted about running the bootstrap script (which installs Homebrew), type
 yadm config local.class <desktop-environment>
 ```
 
+Replace `<desktop-environment>` with your environment class (e.g., `hyprland`, `gnome`, `kde`, etc.). This is to select the appropriate configuration files for your environment.
+
 ---
 *Managed with [yadm](https://yadm.io/) - Yet Another Dotfiles Manager*
