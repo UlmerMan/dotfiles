@@ -17,13 +17,14 @@ install_waybar() {
             echo "Installing Waybar and dependencies for Arch Linux..."
             
             # Check if packages are already installed
-            if ! pacman -Qs waybar ttf-jetbrains-mono ttf-font-awesome pavucontrol > /dev/null; then
+            if ! pacman -Qs waybar ttf-jetbrains-mono ttf-font-awesome pavucontrol xdg-desktop-portal-hyprland > /dev/null; then
                 # Install required packages
                 sudo pacman -S --noconfirm \
                     waybar \
                     ttf-jetbrains-mono \
                     ttf-font-awesome \
-                    pavucontrol
+                    pavucontrol \
+                    xdg-desktop-portal-hyprland
             else
                 echo "Waybar and dependencies are already installed."
             fi
@@ -36,7 +37,9 @@ install_waybar() {
                 waybar \
                 fonts-jetbrains-mono \
                 fonts-font-awesome \
-                pavucontrol
+                pavucontrol \
+                xdg-desktop-portal \
+                xdg-desktop-portal-gtk
             ;;
             
         "fedora")
@@ -45,7 +48,9 @@ install_waybar() {
                 waybar \
                 jetbrains-mono-fonts \
                 fontawesome-fonts \
-                pavucontrol
+                pavucontrol \
+                xdg-desktop-portal \
+                xdg-desktop-portal-gtk
             ;;
             
         *)
@@ -55,10 +60,14 @@ install_waybar() {
             echo "- JetBrains Mono font"
             echo "- Font Awesome"
             echo "- pavucontrol"
+            echo "- xdg-desktop-portal"
+            echo "- xdg-desktop-portal-hyprland (for Hyprland)"
             return 1
             ;;
     esac
 
+    # Ensure Waybar config directory exists
+    mkdir -p "$HOME/.config/waybar"
 
     # Reload Waybar if it's running
     if pgrep waybar > /dev/null; then
@@ -69,3 +78,6 @@ install_waybar() {
 
     echo "Waybar setup completed."
 }
+
+# Run the installation
+install_waybar
