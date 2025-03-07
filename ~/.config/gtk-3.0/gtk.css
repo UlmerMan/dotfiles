@@ -1,0 +1,60 @@
+/* Network Manager Applet */
+.nm-menu {
+    border-radius: 12px;
+    padding: 6px;
+    background-color: #1e1e2e;  /* base */
+    color: #cdd6f4;             /* text */
+}
+
+.nm-menu menuitem {
+    padding: 6px 8px;
+    color: #cdd6f4;             /* text */
+}
+
+.nm-menu menuitem:hover {
+    background-color: #313244;   /* surface0 */
+    border-radius: 6px;
+}
+
+.nm-menu menuitem label {
+    padding-left: 8px;
+}
+
+.nm-menu menuitem:disabled {
+    color: #6c7086;             /* overlay0 */
+}
+
+.nm-menu separator {
+    margin: 4px 0;
+    background-color: #313244;   /* surface0 */
+}
+
+/* Network Manager Connection Editor */
+.nm-connection-editor {
+    border-radius: 12px;
+    background-color: #1e1e2e;   /* base */
+}
+
+.nm-connection-editor headerbar {
+    border-radius: 12px 12px 0 0;
+    background-color: #181825;   /* mantle */
+}
+
+.nm-connection-editor button {
+    padding: 6px 12px;
+    border-radius: 6px;
+    background-color: #313244;   /* surface0 */
+    color: #cdd6f4;             /* text */
+}
+
+.nm-connection-editor button:hover {
+    background-color: #45475a;   /* surface1 */
+}
+
+.nm-connection-editor list row {
+    padding: 8px;
+}
+
+.nm-connection-editor list row:selected {
+    background-color: #313244;   /* surface0 */
+}
