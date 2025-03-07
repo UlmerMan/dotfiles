@@ -70,7 +70,8 @@
         "format-alt": "󱘖 {bandwidthUpBytes} 󱘎 {bandwidthDownBytes}",
         "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n󰤢 {gwaddr}\n",
         "tooltip-format-wifi": "󰤨 {essid} ({signalStrength}%)\n󰩟 {ipaddr}/{cidr}\n󰤢 {gwaddr}\n󱘖 {bandwidthUpBytes} 󱘎 {bandwidthDownBytes}",
-        "on-click": "nm-connection-editor"
+        "on-click": "nm-connection-editor",
+        "on-click-right": "nm-applet"
     },
 
     "pulseaudio": {
